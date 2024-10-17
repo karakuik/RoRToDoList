@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   root "articles#index"
   get "/articles", to: "articles#index"
   get "/articles/id", to: "articles#show"
+  
+  get "/todo", to:  "to_do#index"
+  get "/todo/id", to:  "to_do#show"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
