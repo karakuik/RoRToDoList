@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   root "articles#index"
-  get "/articles", to: "articles#index"
-  get "/articles/id", to: "articles#show"
-  
+  resources :articles do
+    resources :comments # This creates comments as a nested resource within articles. 
+  end
+
   get "/todo", to:  "to_do#index"
   get "/todo/id", to:  "to_do#show"
 
