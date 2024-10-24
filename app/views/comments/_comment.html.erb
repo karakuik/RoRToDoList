@@ -1,3 +1,4 @@
+<% unless comment.archived? %>
   <hr>
   <p>
     <strong>Commenter:</strong>
@@ -8,3 +9,4 @@
     <strong>Comment:</strong>
     <%= comment.body %>
   </p>
+<% end %>
